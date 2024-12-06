@@ -1,6 +1,6 @@
 "use client";
 
-import { TrendingUp, Settings } from "lucide-react";
+import { Settings } from "lucide-react";
 
 import {
   Card,
@@ -19,7 +19,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Input } from "@/components/ui/input";
 
 import { Button } from "@/components/ui/button";
 

@@ -1,8 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { TrendingUp } from "lucide-react";
-import { Label, LabelList, Pie, PieChart, Sector } from "recharts";
+import { LabelList, Pie, PieChart } from "recharts";
 
 import {
   Card,
@@ -13,22 +12,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
   ChartConfig,
   ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
   ChartStyle,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-import { PieSectorDataItem } from "recharts/types/polar/Pie";
+
 const chartData = [
   { browser: "chrome", visitors: 1253252, fill: "var(--color-chrome)" },
   { browser: "safari", visitors: 249142, fill: "var(--color-safari)" },
