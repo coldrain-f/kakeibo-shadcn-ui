@@ -55,12 +55,6 @@ const chartConfig = {
 
 export function ExamplePieChart() {
   const id = "pie-interactive";
-  const [activeMonth, setActiveMonth] = React.useState(chartData[0].browser);
-  const activeIndex = React.useMemo(
-    () => chartData.findIndex((item) => item.browser === activeMonth),
-    [activeMonth]
-  );
-  const months = React.useMemo(() => chartData.map((item) => item.browser), []);
 
   return (
     <Card data-chart={id} className="flex flex-col">

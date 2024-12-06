@@ -42,12 +42,6 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function ExamplePieChart2() {
-  const totalVisitors = React.useMemo(() => {
-    // return chartData.reduce((acc, curr) => acc + curr.visitors, 0);
-    return "자산";
-    return "";
-  }, []);
-
   return (
     <Card className="flex flex-col">
       <CardHeader className="pb-0">
