@@ -43,137 +43,137 @@ export function Table1() {
           <TableCaption></TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead className="text-center">大分類</TableHead>
-              <TableHead className="text-center">小分類</TableHead>
-              <TableHead className="text-center">項目</TableHead>
-              <TableHead className="text-center">1月</TableHead>
-              <TableHead className="text-center">2月</TableHead>
-              <TableHead className="text-center">3月</TableHead>
-              <TableHead className="text-center">4月</TableHead>
-              <TableHead className="text-center">5月</TableHead>
-              <TableHead className="text-center">6月</TableHead>
-              <TableHead className="text-center">7月</TableHead>
-              <TableHead className="text-center">8月</TableHead>
-              <TableHead className="text-center">9月</TableHead>
-              <TableHead className="text-center">10月</TableHead>
-              <TableHead className="text-center">11月</TableHead>
-              <TableHead className="text-center">12月</TableHead>
+              <TableHead className="text-center h-12">大分類</TableHead>
+              <TableHead className="text-center h-12">小分類</TableHead>
+              <TableHead className="text-center h-12">項目</TableHead>
+              <TableHead className="text-center h-12">1月</TableHead>
+              <TableHead className="text-center h-12">2月</TableHead>
+              <TableHead className="text-center h-12">3月</TableHead>
+              <TableHead className="text-center h-12">4月</TableHead>
+              <TableHead className="text-center h-12">5月</TableHead>
+              <TableHead className="text-center h-12">6月</TableHead>
+              <TableHead className="text-center h-12">7月</TableHead>
+              <TableHead className="text-center h-12">8月</TableHead>
+              <TableHead className="text-center h-12">9月</TableHead>
+              <TableHead className="text-center h-12">10月</TableHead>
+              <TableHead className="text-center h-12">11月</TableHead>
+              <TableHead className="text-center h-12">12月</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             <TableRow>
               <TableCell
-                className="text-center font-bold bg-stone-50"
+                className="text-center font-bold bg-stone-50 px-4"
                 rowSpan={3}
               >
                 流動資産
               </TableCell>
               <TableCell
-                className="text-center font-semibold bg-stone-50"
+                className="text-center font-semibold bg-stone-50 px-4"
                 rowSpan={2}
               >
                 不動産
               </TableCell>
-              <TableCell className="text-center font-semibold bg-stone-50">
+              <TableCell className="text-center font-semibold bg-stone-50 p-4">
                 アパート 1
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
-              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700">
+              <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
                 60,000,000
               </TableCell>
             </TableRow>
 
             <TableRow>
-              <TableCell className="text-center font-semibold bg-stone-50">
+              <TableCell className="text-center font-semibold bg-stone-50 p-4">
                 アパート 2
               </TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
-              <TableCell className="text-right">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
+              <TableCell className="text-right py-4">39,000,000</TableCell>
             </TableRow>
 
             <TableRow>
               <TableCell
-                className="text-center font-bold bg-stone-50"
+                className="text-center font-bold bg-stone-50 p-4"
                 colSpan={2}
               >
                 小計
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold">
+              <TableCell className="text-right bg-stone-50 font-semibold p-4">
                 139,310,000
               </TableCell>
             </TableRow>

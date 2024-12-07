@@ -1,4 +1,5 @@
 import { AppSidebar } from "@/components/app-sidebar";
+import { BarChart1 } from "@/components/charts/bar-chart";
 import { ExamplePieChart } from "@/components/charts/pie-chart";
 import { ExamplePieChart2 } from "@/components/charts/pie-chart2";
 import { ExamplePieChart3 } from "@/components/charts/pie-chart3";
@@ -79,9 +80,28 @@ export default function Page() {
           <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min">
             <ExamplePieChart4 />
           </div>
+          <div className="grid auto-rows-min gap-4 md:grid-cols-4">
+            <div className="aspect-video rounded-xl bg-muted/50">
+              <BarChart1 />
+            </div>
+            <div className="aspect-video rounded-xl bg-muted/50">
+              <BarChart1 />
+            </div>
+            <div className="aspect-video rounded-xl bg-muted/50">
+              <BarChart1 />
+            </div>
+            <div className="aspect-video rounded-xl bg-muted/50">
+              <BarChart1 />
+            </div>
+          </div>
+
           <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min">
             <Table1 />
           </div>
+
+          {/* <div className="grid auto-rows-min gap-4 md:grid-cols-2">
+            <BudgetDashboard />
+          </div> */}
         </div>
       </SidebarInset>
     </SidebarProvider>
