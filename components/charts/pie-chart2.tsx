@@ -46,7 +46,7 @@ export function ExamplePieChart2() {
     <Card className="flex flex-col">
       <CardHeader className="pb-0">
         <CardTitle className="text-3xl">負債</CardTitle>
-        <CardDescription className="">25,400,000円</CardDescription>
+        <CardDescription>25,400,000円</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
