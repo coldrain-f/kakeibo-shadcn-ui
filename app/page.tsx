@@ -1,3 +1,9 @@
+"use client";
+import { useRouter } from "next/navigation";
+
 export default function Home() {
-  return <div>Home</div>;
+  const router = useRouter();
+  router.replace("/dashboard/assetDashboard");
+
+  return <></>;
 }
