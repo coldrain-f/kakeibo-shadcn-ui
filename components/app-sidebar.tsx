@@ -73,11 +73,11 @@ const data = {
         },
         {
           title: "연간 결산",
-          url: "/dashboard/yearlyReport",
+          url: "/dashboard/yearlySettlement",
         },
         {
           title: "연간 리포트",
-          url: "#",
+          url: "/dashboard/yearlyReport",
         },
       ],
     },
@@ -89,24 +89,20 @@ const data = {
       items: [
         {
           title: "월별 가계부",
-          url: "#",
-        },
-        {
-          title: "목적 통장",
-          url: "#",
+          url: "/dashboard/kakebo/monthlyLedger",
         },
       ],
     },
 
     {
-      title: "설정",
+      title: "자산 관리",
       url: "#",
       icon: Settings2,
       isActive: true,
       items: [
         {
-          title: "가계부 설정",
-          url: "#",
+          title: "목적 통장",
+          url: "/dashboard/assetsManagement/purposeAccount",
         },
       ],
     },
