@@ -68,12 +68,12 @@ const data = {
       items: [
         {
           title: "자산 현황",
-          url: "#",
+          url: "/dashboard/assetDashboard",
           active: true,
         },
         {
           title: "연간 결산",
-          url: "#",
+          url: "/dashboard/yearlyReport",
         },
         {
           title: "연간 리포트",
