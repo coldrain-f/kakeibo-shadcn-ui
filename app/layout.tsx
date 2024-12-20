@@ -26,6 +26,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { Button } from "@/components/ui/button";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -71,19 +72,38 @@ export default function RootLayout({
                   </BreadcrumbList>
                 </Breadcrumb>
               </div>
-              <div className="mr-5">
-                <Select defaultValue="1">
-                  <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="선택" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectLabel>다국어</SelectLabel>
-                      <SelectItem value="1">日本語</SelectItem>
-                      <SelectItem value="2">한국어</SelectItem>
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
+              <div className="flex justify-start mr-5">
+                <div className="flex">
+                  <a href="https://claude.ai/" target="_blank">
+                    <Button variant={"ghost"}>Claude</Button>
+                  </a>
+                  <Separator orientation="vertical" className="h-5 mt-2" />
+                  <a href="https://app.netlify.com/" target="_blank">
+                    <Button variant={"ghost"}>Netlify</Button>
+                  </a>
+                  <Separator orientation="vertical" className="h-5 mt-2" />
+                  <a href="https://ui.shadcn.com/" target="_blank">
+                    <Button variant={"ghost"}>Shadcn-UI</Button>
+                  </a>
+                  <Separator orientation="vertical" className="h-5 mt-2" />
+                  <a href="https://lucide.dev/icons/" target="_blank">
+                    <Button variant={"ghost"}>Lucide</Button>
+                  </a>
+                </div>
+                <div className="ms-10">
+                  <Select defaultValue="1">
+                    <SelectTrigger className="w-[180px]">
+                      <SelectValue placeholder="선택" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectGroup>
+                        <SelectLabel>다국어</SelectLabel>
+                        <SelectItem value="1">日本語</SelectItem>
+                        <SelectItem value="2">한국어</SelectItem>
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
             </header>
             {children}
