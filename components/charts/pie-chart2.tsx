@@ -87,7 +87,7 @@ export function ExamplePieChart2() {
             >
               <LabelList
                 dataKey="browser"
-                className="fill-background"
+                className="fill-background dark:fill-white"
                 stroke="none"
                 fontSize={12}
                 formatter={(value: keyof typeof chartConfig) =>

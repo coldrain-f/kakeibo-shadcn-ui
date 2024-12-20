@@ -86,7 +86,7 @@ export function ExamplePieChart3() {
               <LabelList
                 position="inside"
                 offset={8}
-                className="fill-background"
+                className="fill-background dark:fill-white"
                 fontSize={12}
                 formatter={() => {
                   return "資產";
@@ -97,7 +97,7 @@ export function ExamplePieChart3() {
               <LabelList
                 position="top"
                 offset={12}
-                className="fill-foreground"
+                className="fill-foreground dark:fill-white"
                 fontSize={12}
                 formatter={(v: number) => {
                   return (
@@ -108,7 +108,7 @@ export function ExamplePieChart3() {
               <LabelList
                 position="inside"
                 offset={8}
-                className="fill-background"
+                className="fill-background dark:fill-white"
                 fontSize={12}
                 formatter={() => {
                   return "負債";
@@ -119,7 +119,7 @@ export function ExamplePieChart3() {
               <LabelList
                 position="top"
                 offset={12}
-                className="fill-foreground"
+                className="fill-foreground dark:fill-white"
                 fontSize={12}
                 formatter={(v: number) => {
                   return (
@@ -130,7 +130,7 @@ export function ExamplePieChart3() {
               <LabelList
                 position="inside"
                 offset={8}
-                className="fill-background"
+                className="fill-background dark:fill-white"
                 fontSize={12}
                 formatter={() => {
                   return "純資産";

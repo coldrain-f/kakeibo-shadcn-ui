@@ -63,18 +63,18 @@ export function Table1() {
           <TableBody>
             <TableRow>
               <TableCell
-                className="text-center font-bold bg-stone-50 px-4"
+                className="text-center font-bold bg-stone-50 dark:bg-stone-900 px-4"
                 rowSpan={3}
               >
                 流動資産
               </TableCell>
               <TableCell
-                className="text-center font-semibold bg-stone-50 px-4"
+                className="text-center font-semibold bg-stone-50 dark:bg-stone-900 px-4"
                 rowSpan={2}
               >
                 不動産
               </TableCell>
-              <TableCell className="text-center font-semibold bg-stone-50 p-4">
+              <TableCell className="text-center font-semibold bg-stone-50 dark:bg-stone-900 p-4">
                 アパート 1
               </TableCell>
               <TableCell className="text-right cursor-pointer hover:underline hover:text-sky-700 py-4">
@@ -116,7 +116,7 @@ export function Table1() {
             </TableRow>
 
             <TableRow>
-              <TableCell className="text-center font-semibold bg-stone-50 p-4">
+              <TableCell className="text-center font-semibold bg-stone-50 dark:bg-stone-900 p-4">
                 アパート 2
               </TableCell>
               <TableCell className="text-right py-4">39,000,000</TableCell>
@@ -135,45 +135,45 @@ export function Table1() {
 
             <TableRow>
               <TableCell
-                className="text-center font-bold bg-stone-50 p-4"
+                className="text-center font-bold bg-stone-50 dark:bg-stone-900 p-4"
                 colSpan={2}
               >
                 小計
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold py-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold py-4">
                 139,310,000
               </TableCell>
-              <TableCell className="text-right bg-stone-50 font-semibold p-4">
+              <TableCell className="text-right bg-stone-50 dark:bg-stone-900 font-semibold p-4">
                 139,310,000
               </TableCell>
             </TableRow>
