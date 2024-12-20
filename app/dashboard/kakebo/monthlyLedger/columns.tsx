@@ -83,11 +83,11 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     id: "actions",
-    cell: ({ row }) => {
+    cell: () => {
       const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
       });
-      row.original;
+      // row.original;/
 
       function onSubmit(data: z.infer<typeof FormSchema>) {
         alert("A");
