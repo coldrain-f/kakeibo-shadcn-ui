@@ -10,11 +10,9 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogOverlay,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
 
 import * as React from "react";
 import { format } from "date-fns";
@@ -39,7 +37,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { PopoverPortal } from "@radix-ui/react-popover";
 
 const FormSchema = z.object({
   dob: z.date({
@@ -109,10 +106,7 @@ export const columns: ColumnDef<Payment>[] = [
               <DialogTitle className="mb-4">수입 수정</DialogTitle>
               <DialogDescription>
                 <Form {...form}>
-                  <form
-                    onSubmit={form.handleSubmit(onSubmit)}
-                    className="space-y-8"
-                  >
+                  <form onSubmit={form.handleSubmit(onSubmit)}>
                     <FormField
                       control={form.control}
                       name="dob"
