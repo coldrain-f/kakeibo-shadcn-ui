@@ -37,6 +37,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
 const FormSchema = z.object({
   dob: z.date({
@@ -149,6 +150,35 @@ export const columns: ColumnDef<Payment>[] = [
                             </PopoverContent>
                           </Popover>
                           <FormDescription></FormDescription>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="dob"
+                      render={() => (
+                        <FormItem>
+                          <FormLabel>수입내역</FormLabel>
+                          <FormControl>
+                            <Input className="w-[240px]" />
+                          </FormControl>
+                          <FormDescription />
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="dob"
+                      render={() => (
+                        <FormItem>
+                          <FormLabel>금액</FormLabel>
+                          <FormControl>
+                            <Input className="w-[240px]" />
+                          </FormControl>
+                          <FormDescription />
                           <FormMessage />
                         </FormItem>
                       )}
