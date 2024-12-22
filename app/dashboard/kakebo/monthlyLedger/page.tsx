@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/card";
 import { DataTable } from "./data-table";
 import { Payment, columns } from "./columns";
-import { DataTable2 } from "./data-table2";
 
 export default async function MonthlyLedger() {
   const data = await getData();
@@ -44,7 +43,6 @@ export default async function MonthlyLedger() {
 
           <div>
             <h4 className="text-2xl font-bold mb-4">수입 목표</h4>
-            <DataTable2 columns={columns} data={data} />
           </div>
         </div>
       </CardContent>
