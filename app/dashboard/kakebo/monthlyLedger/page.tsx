@@ -64,7 +64,7 @@ export default async function MonthlyLedger() {
               <div className="flex justify-start gap-2">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <Button variant="outline">등록</Button>
+                    <Button variant="secondary">등록</Button>
                   </DialogTrigger>
 
                   <DialogContent>
