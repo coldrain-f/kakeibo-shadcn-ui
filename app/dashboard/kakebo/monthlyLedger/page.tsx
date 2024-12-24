@@ -8,6 +8,26 @@ import {
 } from "@/components/ui/card";
 import { DataTable } from "./data-table";
 import { Payment, columns } from "./columns";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default async function MonthlyLedger() {
   const data = await getData();
@@ -37,7 +57,64 @@ export default async function MonthlyLedger() {
       <CardContent>
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <h4 className="text-2xl font-bold mb-4">수입</h4>
+            <div className="flex justify-between">
+              <h4 className="text-2xl font-bold mb-4">수입</h4>
+              <div className="flex justify-start gap-2">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button variant="outline">등록</Button>
+                  </DialogTrigger>
+
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle className="mb-4">수입 등록</DialogTitle>
+                      <DialogDescription>
+                        <div className="grid w-full items-center gap-3">
+                          <Label htmlFor="e">날짜</Label>
+                          <Input id="e" />
+
+                          <div className="flex justify-start gap-2">
+                            <div className="grid w-full items-center gap-2">
+                              <Label htmlFor="b">대분류</Label>
+
+                              <Select>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="Theme" />
+                                </SelectTrigger>
+
+                                <SelectContent>
+                                  <SelectItem value="light">Light</SelectItem>
+                                  <SelectItem value="dark">Dark</SelectItem>
+                                  <SelectItem value="system">System</SelectItem>
+                                </SelectContent>
+                              </Select>
+                            </div>
+
+                            <div className="grid w-full items-center gap-2">
+                              <Label htmlFor="c">소분류</Label>
+                              <Input id="c" />
+                            </div>
+                          </div>
+
+                          <Label htmlFor="d">수입내역</Label>
+                          <Input id="d" />
+
+                          <Label htmlFor="e">금액</Label>
+                          <Input id="e" type="number" />
+
+                          <Label htmlFor="message-2">메모</Label>
+                          <Textarea id="message-2" />
+                        </div>
+                      </DialogDescription>
+                    </DialogHeader>
+                    <DialogFooter>
+                      <Button variant="default">등록</Button>
+                      <Button variant="secondary">취소</Button>
+                    </DialogFooter>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </div>
             <DataTable columns={columns} data={data} />
           </div>
 
