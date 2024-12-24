@@ -11,6 +11,7 @@ import { Payment, columns } from "./columns";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -28,6 +29,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { DatePicker } from "@/components/kakebo/date-picker";
 
 export default async function MonthlyLedger() {
   const data = await getData();
@@ -71,7 +73,7 @@ export default async function MonthlyLedger() {
                       <DialogDescription>
                         <div className="grid w-full items-center gap-3">
                           <Label htmlFor="e">날짜</Label>
-                          <Input id="e" />
+                          <DatePicker />
 
                           <div className="flex justify-start gap-2">
                             <div className="grid w-full items-center gap-2">
@@ -79,28 +81,39 @@ export default async function MonthlyLedger() {
 
                               <Select>
                                 <SelectTrigger>
-                                  <SelectValue placeholder="Theme" />
+                                  <SelectValue placeholder="선택" />
                                 </SelectTrigger>
 
                                 <SelectContent>
-                                  <SelectItem value="light">Light</SelectItem>
-                                  <SelectItem value="dark">Dark</SelectItem>
-                                  <SelectItem value="system">System</SelectItem>
+                                  <SelectItem value="1">월급</SelectItem>
+                                  <SelectItem value="2">상여</SelectItem>
+                                  <SelectItem value="3">수당</SelectItem>
+                                  <SelectItem value="4">기타</SelectItem>
                                 </SelectContent>
                               </Select>
                             </div>
 
                             <div className="grid w-full items-center gap-2">
                               <Label htmlFor="c">소분류</Label>
-                              <Input id="c" />
+
+                              <Select>
+                                <SelectTrigger>
+                                  <SelectValue placeholder="선택" />
+                                </SelectTrigger>
+
+                                <SelectContent>
+                                  <SelectItem value="1">아내상여</SelectItem>
+                                  <SelectItem value="2">남편상여</SelectItem>
+                                </SelectContent>
+                              </Select>
                             </div>
                           </div>
 
                           <Label htmlFor="d">수입내역</Label>
                           <Input id="d" />
 
-                          <Label htmlFor="e">금액</Label>
-                          <Input id="e" type="number" />
+                          <Label htmlFor="f">금액</Label>
+                          <Input id="f" type="number" />
 
                           <Label htmlFor="message-2">메모</Label>
                           <Textarea id="message-2" />
@@ -109,7 +122,9 @@ export default async function MonthlyLedger() {
                     </DialogHeader>
                     <DialogFooter>
                       <Button variant="default">등록</Button>
-                      <Button variant="secondary">취소</Button>
+                      <DialogClose asChild>
+                        <Button variant="secondary">취소</Button>
+                      </DialogClose>
                     </DialogFooter>
                   </DialogContent>
                 </Dialog>
