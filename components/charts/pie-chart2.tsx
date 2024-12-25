@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { LabelList, Pie, PieChart } from "recharts";
-
+import { useTranslations } from "next-intl";
 import {
   Card,
   CardContent,
@@ -42,11 +42,13 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function ExamplePieChart2() {
+  const t = useTranslations("assetDashboard");
+
   return (
     <Card className="flex flex-col">
       <CardHeader className="pb-0">
-        <CardTitle className="text-3xl">負債</CardTitle>
-        <CardDescription>25,400,000円</CardDescription>
+        <CardTitle className="text-3xl">{t("liabilities")}</CardTitle>
+        <CardDescription>25,400,000{t("currency")}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -80,7 +82,7 @@ export function ExamplePieChart2() {
                   >
                     {payload.visitors
                       .toString()
-                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "円"}
+                      .replace(/\B(?=(\d{3})+(?!\d))/g, ",") + t("currency")}
                   </text>
                 );
               }}

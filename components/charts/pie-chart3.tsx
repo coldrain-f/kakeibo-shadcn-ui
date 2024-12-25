@@ -16,6 +16,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { useTranslations } from "next-intl";
 const chartData = [
   {
     month: "January",
@@ -41,11 +42,13 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function ExamplePieChart3() {
+  const t = useTranslations("assetDashboard");
+
   return (
     <Card>
       <CardHeader className="pb-0">
-        <CardTitle className="text-3xl">純資産</CardTitle>
-        <CardDescription>180,251,000円</CardDescription>
+        <CardTitle className="text-3xl">{t("netAssets")}</CardTitle>
+        <CardDescription>180,251,000{t("currency")}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -79,7 +82,8 @@ export function ExamplePieChart3() {
                 fontSize={12}
                 formatter={(v: number) => {
                   return (
-                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "円"
+                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+                    t("currency")
                   );
                 }}
               />
@@ -101,7 +105,8 @@ export function ExamplePieChart3() {
                 fontSize={12}
                 formatter={(v: number) => {
                   return (
-                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "円"
+                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+                    t("currency")
                   );
                 }}
               />
@@ -123,7 +128,8 @@ export function ExamplePieChart3() {
                 fontSize={12}
                 formatter={(v: number) => {
                   return (
-                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "円"
+                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+                    t("currency")
                   );
                 }}
               />

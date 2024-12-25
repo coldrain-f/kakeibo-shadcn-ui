@@ -1,0 +1,10 @@
+{
+  "assetDashboard": {
+    "assets": "資産",
+    "liabilities": "負債",
+    "netAssets": "純資産",
+    "flowOfAssets": "資產の流れ",
+    "currentStatusOfAssets": "資産の現況",
+    "currency": "円"
+  }
+}

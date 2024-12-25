@@ -22,12 +22,12 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 
-// This is sample data.
+import { useParams } from "next/navigation";
+
 const data = {
   user: {
     name: "상운",
     email: "sangwoonin@gmail.com",
-    // avatar: "/avatars/shadcn.jpg",
     avatar: "https://ui.shadcn.com/avatars/shadcn.jpg",
   },
   teams: [
@@ -47,19 +47,21 @@ const data = {
       plan: "Free",
     },
   ],
-  navMain: [
-    // {
-    //   title: "가계부 관리",
-    //   url: "#",
-    //   icon: Bot,
-    //   isActive: true,
-    //   items: [
-    //     {
-    //       title: "항목 설정",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
+
+  projects: [
+    {
+      name: "가계부 프로젝트",
+      url: "#",
+      icon: Frame,
+    },
+  ],
+};
+
+export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const params = useParams();
+  const locale = params.locale;
+
+  const navMain = [
     {
       title: "대시보드",
       url: "#",
@@ -68,16 +70,16 @@ const data = {
       items: [
         {
           title: "자산 현황",
-          url: "/dashboard/assetDashboard",
+          url: `/${locale}/dashboard/assetDashboard`,
           active: true,
         },
         {
           title: "연간 결산",
-          url: "/dashboard/yearlySettlement",
+          url: `/${locale}/dashboard/yearlySettlement`,
         },
         {
           title: "연간 리포트",
-          url: "/dashboard/yearlyReport",
+          url: `/${locale}/dashboard/yearlyReport`,
         },
       ],
     },
@@ -89,7 +91,7 @@ const data = {
       items: [
         {
           title: "월별 가계부",
-          url: "/dashboard/kakebo/monthlyLedger",
+          url: `/${locale}/dashboard/kakeibo/monthlyLedger`,
         },
       ],
     },
@@ -102,28 +104,19 @@ const data = {
       items: [
         {
           title: "목적 통장",
-          url: "/dashboard/assetsManagement/purposeAccount",
+          url: `/${locale}/dashboard/assetsManagement/purposeAccount`,
         },
       ],
     },
-  ],
-  projects: [
-    {
-      name: "가계부 프로젝트",
-      url: "#",
-      icon: Frame,
-    },
-  ],
-};
+  ];
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <NavMain items={navMain} />
         {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>

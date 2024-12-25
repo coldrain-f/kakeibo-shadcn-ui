@@ -21,13 +21,16 @@ import {
 } from "@/components/ui/table";
 
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export function Table1() {
+  const t = useTranslations("assetDashboard");
+
   return (
     <Card>
       <CardHeader>
         <CardTitle className="text-3xl flex justify-between">
-          資産の現況
+          {t("currentStatusOfAssets")}
           <Button variant="outline">
             <Settings />
             資産の形態

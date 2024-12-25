@@ -27,6 +27,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { useTranslations } from "next-intl";
 const chartData = [
   {
     month: "1月",
@@ -118,11 +119,13 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function ExamplePieChart4() {
+  const t = useTranslations("assetDashboard");
+
   return (
     <Card>
       <CardHeader>
         <CardTitle className="text-3xl flex justify-between">
-          <span>資產の流れ</span>
+          <span>{t("flowOfAssets")}</span>
           <Select defaultValue="1">
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="선택" />
@@ -173,7 +176,8 @@ export function ExamplePieChart4() {
                 fontSize={12}
                 formatter={(v: number) => {
                   return (
-                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "円"
+                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+                    t("currency")
                   );
                 }}
               />
@@ -186,7 +190,8 @@ export function ExamplePieChart4() {
                 fontSize={12}
                 formatter={(v: number) => {
                   return (
-                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "円"
+                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+                    t("currency")
                   );
                 }}
               />
@@ -199,7 +204,8 @@ export function ExamplePieChart4() {
                 fontSize={12}
                 formatter={(v: number) => {
                   return (
-                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "円"
+                    v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+                    t("currency")
                   );
                 }}
               />
