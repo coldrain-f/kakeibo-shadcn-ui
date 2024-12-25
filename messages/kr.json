@@ -1,0 +1,10 @@
+{
+  "assetDashboard": {
+    "assets": "자산",
+    "liabilities": "부채",
+    "netAssets": "순자산",
+    "flowOfAssets": "자산 흐름",
+    "currentStatusOfAssets": "자산 현황",
+    "currency": "엔"
+  }
+}
