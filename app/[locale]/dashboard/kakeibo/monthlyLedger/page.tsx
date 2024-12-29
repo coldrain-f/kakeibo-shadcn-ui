@@ -57,6 +57,49 @@ export default async function MonthlyLedger() {
         <CardDescription className="text-md">01.01 ~ 01.31</CardDescription>
       </CardHeader>
       <CardContent>
+        <div className="grid grid-cols-4 gap-4 mb-6">
+          {" "}
+          <Card>
+            <CardHeader>
+              <CardTitle>수입</CardTitle>
+              <CardDescription>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-black dark:text-white">
+                  9,685,000원
+                </h4>
+              </CardDescription>
+            </CardHeader>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>저축</CardTitle>
+              <CardDescription>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-black dark:text-white">
+                  800,000원
+                </h4>
+              </CardDescription>
+            </CardHeader>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>지출</CardTitle>
+              <CardDescription>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-black dark:text-white">
+                  3,332,525원
+                </h4>
+              </CardDescription>
+            </CardHeader>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>저축률</CardTitle>
+              <CardDescription>
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-black dark:text-white">
+                  65.6%
+                </h4>
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
             <div className="flex justify-between">
