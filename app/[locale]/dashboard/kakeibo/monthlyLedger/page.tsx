@@ -25,7 +25,9 @@ import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -53,11 +55,51 @@ export default async function MonthlyLedger() {
   return (
     <Card className="ml-4 mr-4">
       <CardHeader>
-        <CardTitle className="text-3xl">01 January</CardTitle>
+        <CardTitle className="flex justify-between">
+          <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0">
+            01 January
+          </h2>
+          <div className="flex justify-start gap-2">
+            <Select defaultValue="2024">
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="선택" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>년도</SelectLabel>
+                  <SelectItem value="2023">2023년</SelectItem>
+                  <SelectItem value="2024">2024년</SelectItem>
+                  <SelectItem value="2025">2025년</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+
+            <Select defaultValue="1">
+              <SelectTrigger className="w-[100px]">
+                <SelectValue placeholder="선택" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="1">1월</SelectItem>
+                <SelectItem value="2">2월</SelectItem>
+                <SelectItem value="3">3월</SelectItem>
+                <SelectItem value="4">4월</SelectItem>
+                <SelectItem value="5">5월</SelectItem>
+                <SelectItem value="6">6월</SelectItem>
+                <SelectItem value="7">7월</SelectItem>
+                <SelectItem value="8">8월</SelectItem>
+                <SelectItem value="9">9월</SelectItem>
+                <SelectItem value="10">10월</SelectItem>
+                <SelectItem value="11">11월</SelectItem>
+                <SelectItem value="12">12월</SelectItem>
+              </SelectContent>
+            </Select>
+            <Button>이동</Button>
+          </div>
+        </CardTitle>
         <CardDescription className="text-md">01.01 ~ 01.31</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-4 gap-4 mb-12">
           {" "}
           <Card>
             <CardHeader>
