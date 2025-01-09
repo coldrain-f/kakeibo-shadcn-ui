@@ -48,6 +48,15 @@ export default async function MonthlyLedger() {
         amount: 1285000,
         note: "",
       },
+      {
+        id: "728ed52d",
+        transactionDate: "01/05(Thu)",
+        mainCategory: "상여",
+        subCategory: "남편상여",
+        incomeDescription: "",
+        amount: 2485000,
+        note: "",
+      },
       // ...
     ];
   }
