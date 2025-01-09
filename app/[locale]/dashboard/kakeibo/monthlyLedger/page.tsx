@@ -108,8 +108,7 @@ export default async function MonthlyLedger() {
         <CardDescription className="text-md">01.01 ~ 01.31</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-4 gap-4 mb-12">
-          {" "}
+        <div className="grid grid-cols-4 gap-4 mb-4">
           <Card>
             <CardHeader>
               <CardTitle>수입</CardTitle>
@@ -149,6 +148,33 @@ export default async function MonthlyLedger() {
                 </h4>
               </CardDescription>
             </CardHeader>
+          </Card>
+        </div>
+        <div className="grid grid-cols-2 gap-4 mb-12">
+          <Card>
+            <CardHeader>
+              <CardTitle>메모장</CardTitle>
+              <CardDescription>
+                이번 달 특이사항이나 메모할 내용을 자유롭게 작성해주세요. <br />
+                (특이사항, 기억할 내용 등)
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Textarea className="mt-4 h-[100px]" />
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <CardTitle>회고</CardTitle>
+              <CardDescription>
+                이번 달 재정을 되돌아보며 KPT로 작성해주세요. <br />
+                Keep: 잘한 소비/습관, Problem: 개선이 필요한 지출, Try: 다음 달
+                목표
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Textarea className="mt-4 h-[100px]" />
+            </CardContent>
           </Card>
         </div>
         <div className="grid grid-cols-2 gap-4">
