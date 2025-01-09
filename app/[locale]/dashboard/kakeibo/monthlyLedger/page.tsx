@@ -33,6 +33,8 @@ import {
 } from "@/components/ui/select";
 import { DatePicker } from "@/components/kakebo/date-picker";
 
+import { Progress } from "@/components/ui/progress";
+
 export default async function MonthlyLedger() {
   const data = await getData();
 
@@ -141,9 +143,14 @@ export default async function MonthlyLedger() {
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle>저축률</CardTitle>
+              <CardTitle>
+                <div className="flex justify-between">
+                  <h5>저축률</h5>
+                  <Progress value={65.6} className="w-[60%] mt-1" />
+                </div>
+              </CardTitle>
               <CardDescription>
-                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-black dark:text-white">
+                <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-green-700 dark:text-white">
                   65.6%
                 </h4>
               </CardDescription>
