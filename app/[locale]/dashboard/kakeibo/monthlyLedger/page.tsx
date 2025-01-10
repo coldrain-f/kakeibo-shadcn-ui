@@ -111,7 +111,7 @@ export default async function MonthlyLedger() {
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-4 gap-4 mb-4">
-          <Card>
+          <Card className="hover:bg-stone-50 hover:cursor-pointer dark:hover:bg-stone-800 bg-stone-50 dark:bg-stone-800">
             <CardHeader>
               <CardTitle>수입</CardTitle>
               <CardDescription>
@@ -121,7 +121,7 @@ export default async function MonthlyLedger() {
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card>
+          <Card className="hover:bg-stone-50 hover:cursor-pointer dark:hover:bg-stone-800">
             <CardHeader>
               <CardTitle>저축</CardTitle>
               <CardDescription>
@@ -131,7 +131,7 @@ export default async function MonthlyLedger() {
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card>
+          <Card className="hover:bg-stone-50 hover:cursor-pointer dark:hover:bg-stone-800">
             <CardHeader>
               <CardTitle>지출</CardTitle>
               <CardDescription>
@@ -141,7 +141,7 @@ export default async function MonthlyLedger() {
               </CardDescription>
             </CardHeader>
           </Card>
-          <Card>
+          <Card className="hover:bg-stone-50 hover:cursor-pointer dark:hover:bg-stone-800">
             <CardHeader>
               <CardTitle>
                 <div className="flex justify-between">
