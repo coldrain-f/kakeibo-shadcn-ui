@@ -59,20 +59,21 @@ export default function YearlyReport() {
 
       <CardContent>
         
-        <div className="grid grid-cols-2 grid-rows-2 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {/* Grid 1 */}
-          <div className="h-[362px] col-span-1">
+          <div className="h-[362px]">
             <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
               <span className="text-slate-700">변동 지출</span>
             </h2>
             <Grid data={data} />
           </div>
+          
 
           {/* Grid 2 */}
-          <div className="h-[500px] col-span-1">
+          <div className="h-[800px] row-span-2">
             <div className="flex justify-between">
               <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
-                <span className="text-slate-700">고정 지출</span>
+                <span className="text-slate-700">고정 지출 1</span>
               </h2>
               <Button variant={"outline"}>템플릿 불러오기</Button>
             </div>
@@ -80,10 +81,10 @@ export default function YearlyReport() {
           </div>
 
           {/* Grid 3 */}
-          <div className="h-[362px]">
+          <div className="h-[362px] mt-12 mb-12">
             <div className="flex justify-between">
               <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
-                <span className="text-slate-700">고정 지출</span>
+                <span className="text-slate-700">고정 지출 2</span>
               </h2>
               <Button variant={"outline"}>템플릿 불러오기</Button>
             </div>

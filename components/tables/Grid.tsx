@@ -11,23 +11,31 @@ import { Data } from '@/app/data2';
 
 import { registerLanguageDictionary, koKR } from 'handsontable/i18n';
 import { registerAllModules } from 'handsontable/registry';
+import { Skeleton } from '@/components/ui/skeleton';
+import { useState } from 'react';
 
 registerAllModules();
 registerLanguageDictionary(koKR);
-
 
 type GridProps = {
   data: Data;
 };
 
 export default function Grid(props: GridProps) {
+  const [isGridRendered, setIsGridRendered] = useState(false);
   return (
     <div className="ht-theme-main w-full h-full">
+      {!isGridRendered && <Skeleton className="w-full h-full" />}
       <HotTable
-        height="100%" // 363
+        afterRender={() => {
+          setIsGridRendered(true);
+        }}
+        height={isGridRendered ? "100%" : "0%"}
         width="100%"
         language={koKR.languageCode}
         data={props.data}
+        viewportRowRenderingOffset={10} // 스크롤 시 10개 행을 사전 렌더링
+        autoRowSize={false}
         colWidths={[80, 150, 150, 150, 150]}        
         stretchH="all"
         nestedHeaders={[
@@ -44,7 +52,7 @@ export default function Grid(props: GridProps) {
         columnSummary={[
           {sourceColumn: 3, type: "sum", destinationRow: 9, destinationColumn: 1},
         ]}
-        // fixedRowsBottom={11}
+        fixedRowsBottom={1}
         comments={false}
         cells={function(row, col) {
           const lastRowIndex = this.instance.countRows() - 1;
