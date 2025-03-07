@@ -12,6 +12,8 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
+import HandsontableProvider from "@/components/handsontable-provider";
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,7 +35,6 @@ export default async function RootLayout({
   // Providing all messages to the client
   // side is the easiest way to get started
   const messages = await getMessages({ locale });
-  
 
   return (
     <html lang={locale}>
@@ -49,7 +50,9 @@ export default async function RootLayout({
               <AppSidebar />
               <SidebarInset>
                 <KakeiboHeader />
-                {children}
+                <HandsontableProvider>
+                  {children}
+                </HandsontableProvider>
               </SidebarInset>
             </SidebarProvider>
           </ThemeProvider>

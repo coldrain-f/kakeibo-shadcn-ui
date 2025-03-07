@@ -9,19 +9,19 @@ import 'handsontable/styles/ht-theme-horizon.css';
 
 import { Data } from '@/app/data2';
 
-import { registerLanguageDictionary, koKR } from 'handsontable/i18n';
+import { koKR } from 'handsontable/i18n';
 import { registerAllModules } from 'handsontable/registry';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useState } from 'react';
 
 registerAllModules();
-registerLanguageDictionary(koKR);
 
 type GridProps = {
   data: Data;
 };
 
 export default function Grid(props: GridProps) {
+
   const [isGridRendered, setIsGridRendered] = useState(false);
   return (
     <div className="ht-theme-main w-full h-full">
@@ -74,15 +74,15 @@ export default function Grid(props: GridProps) {
         mergeCells={
           [{row: 9, col: 1, rowspan: 1, colspan: 4}]
         }
-        dropdownMenu={true} 
+        dropdownMenu={false} 
         contextMenu={true}
-        filters={true}
-        rowHeaders={true}
-        manualRowMove={true}
-        navigableHeaders={true}
-        autoWrapRow={true}
-        autoWrapCol={true}
-        imeFastEdit={true}
+        filters={false}
+        rowHeaders={false}
+        manualRowMove={false}
+        navigableHeaders={false}
+        autoWrapRow={false}
+        autoWrapCol={false}
+        imeFastEdit={false}
         licenseKey="non-commercial-and-evaluation"
       >
         <HotColumn data={0} />

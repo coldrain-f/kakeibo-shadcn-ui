@@ -5,10 +5,12 @@ import { data } from '@/app/data2';
 import { data3 } from '@/app/data3';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator"
 
 export default function YearlyReport() {
-  return <div>
+  return <div className="mb-4">
     <Card className="ml-4 mr-4 h-full">
       <CardHeader className="mr-4 mb-6">
         <CardTitle className="flex justify-between">
@@ -58,39 +60,50 @@ export default function YearlyReport() {
       </CardHeader>
 
       <CardContent>
-        
-        <div className="grid grid-cols-2 gap-4">
-          {/* Grid 1 */}
-          <div className="h-[362px]">
-            <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
-              <span className="text-slate-700">변동 지출</span>
-            </h2>
-            <Grid data={data} />
-          </div>
-          
+        <Tabs defaultValue="account" className="w-full">
+          <TabsList className="mb-4">
+            <TabsTrigger value="account">지출 관리</TabsTrigger>
+            <TabsTrigger value="account2">수입 관리</TabsTrigger>
+          </TabsList>
 
-          {/* Grid 2 */}
-          <div className="h-[800px] row-span-2">
-            <div className="flex justify-between">
-              <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
-                <span className="text-slate-700">고정 지출 1</span>
-              </h2>
-              <Button variant={"outline"}>템플릿 불러오기</Button>
-            </div>
-            <Grid2 data={data3} />
-          </div>
+          <Separator className="mb-12" />
+          <TabsContent value="account">
+            <div className="grid grid-cols-2 gap-4">
+              {/* Grid 1 */}
+              <div className="h-[362px]">
+                <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
+                  <span className="text-slate-700">변동 지출</span>
+                </h2>
+                <Grid data={data} />
+              </div>
+              
 
-          {/* Grid 3 */}
-          <div className="h-[362px] mt-12 mb-12">
-            <div className="flex justify-between">
-              <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
-                <span className="text-slate-700">고정 지출 2</span>
-              </h2>
-              <Button variant={"outline"}>템플릿 불러오기</Button>
+              {/* Grid 2 */}
+              <div className="h-[800px] row-span-2">
+                <div className="flex justify-between">
+                  <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
+                    <span className="text-slate-700">지출 목표</span>
+                  </h2>
+                  <Button variant={"outline"}>템플릿 불러오기</Button>
+                </div>
+                {/* <Grid2 data={data3} /> */}
+              </div>
+
+              {/* Grid 3 */}
+              <div className="h-[362px] mt-12 mb-12">
+                <div className="flex justify-between">
+                  <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
+                    <span className="text-slate-700">고정 지출</span>
+                  </h2>
+                  <Button variant={"outline"}>템플릿 불러오기</Button>
+                </div>
+                {/* <Grid2 data={data3} /> */}
+              </div>
             </div>
-            <Grid2 data={data3} />
-          </div>
-        </div>
+          </TabsContent>
+          <TabsContent value="account2"></TabsContent>
+        </Tabs>
+
 
         
         
