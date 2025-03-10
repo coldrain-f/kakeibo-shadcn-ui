@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator"
 import FixedExpensesGrid from "@/components/grid/FixedExpensesGrid";
 import VariableExpensesGrid from "@/components/grid/VariableExpensesGrid";
 import ExpenseGoalsGrid from '@/components/grid/ExpenseGoalsGrid';
+import { Textarea } from '@/components/ui/textarea';
 
 export default function YearlyReport() {
   return <div className="mb-4">
@@ -67,10 +68,37 @@ export default function YearlyReport() {
             <TabsTrigger value="account2">수입 관리</TabsTrigger>
           </TabsList>
 
-          <Separator className="mb-12" />
+          {/* <Separator className="mb-12" /> */}
           <TabsContent value="account">
-            <div className="grid grid-cols-2 gap-4">
-              {/* Grid 1 */}
+            <div className="grid grid-cols-2 gap-4 mb-12">
+              <Card>
+                <CardHeader>
+                  <CardTitle>메모장</CardTitle>
+                  <CardDescription>
+                    이번 달 특이사항이나 메모할 내용을 자유롭게 작성해주세요. <br />
+                    (특이사항, 기억할 내용 등)
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Textarea className="mt-4 h-[100px]" />
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>회고</CardTitle>
+                  <CardDescription>
+                    이번 달 재정을 되돌아보며 KPT로 작성해주세요. <br />
+                    Keep: 잘한 소비/습관, Problem: 개선이 필요한 지출, Try: 다음 달
+                    목표
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Textarea className="mt-4 h-[100px]" />
+                </CardContent>
+            </Card>
+          </div>
+            <div className="grid grid-cols-2 gap-4 mb-12">
+              {/* 변동 지출 Grid */}
               <div className="h-[362px]">
                 <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
                   <span className="text-slate-700">변동 지출</span>
@@ -78,19 +106,8 @@ export default function YearlyReport() {
                 <VariableExpensesGrid data={data} />
               </div>
               
-
-              {/* Grid 2 */}
-              <div className="h-[825px] row-span-2">
-                <div className="flex justify-between">
-                  <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
-                    <span className="text-slate-700">지출 목표</span>
-                  </h2>
-                </div>
-                <ExpenseGoalsGrid data={data3} />
-              </div>
-
-              {/* Grid 3 */}
-              <div className="h-[362px] mt-12 mb-12">
+              {/* 고정 지출 Grid */}
+              <div className="h-[362px]">
                 <div className="flex justify-between">
                   <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
                     <span className="text-slate-700">고정 지출</span>
