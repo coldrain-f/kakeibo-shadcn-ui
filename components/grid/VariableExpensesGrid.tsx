@@ -20,13 +20,15 @@ type GridProps = {
   data: Data;
 };
 
-export default function Grid(props: GridProps) {
+
+export default function VariableExpensesGrid(props: GridProps) {
 
   const [isGridRendered, setIsGridRendered] = useState(false);
   return (
     <div className="ht-theme-main w-full h-full">
       {!isGridRendered && <Skeleton className="w-full h-full" />}
       <HotTable
+        className='z-0'
         afterRender={() => {
           setIsGridRendered(true);
         }}
@@ -85,7 +87,7 @@ export default function Grid(props: GridProps) {
         imeFastEdit={false}
         licenseKey="non-commercial-and-evaluation"
       >
-        <HotColumn data={0} />
+        <HotColumn data={0} type="numeric" />
         <HotColumn data={1} type="dropdown" source={["식비", "간식비", "교통 / 통신비", "의류", "미용", "문화", "교육", "데이트", "여행", "선물"]} />
         <HotColumn data={2} type="dropdown" source={["현금", "체크카드 A", "체크카드 B", "신용카드 A", "신용카드 B", "신용카드 C", "신용카드 D"]} />
         <HotColumn data={3} type="numeric" />

@@ -1,13 +1,14 @@
-import Grid from "@/components/tables/Grid";
-import Grid2 from "@/components/tables/Grid2";
-
 import { data } from '@/app/data2';
 import { data3 } from '@/app/data3';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator"
+import FixedExpensesGrid from "@/components/grid/FixedExpensesGrid";
+import VariableExpensesGrid from "@/components/grid/VariableExpensesGrid";
+import ExpenseGoalsGrid from '@/components/grid/ExpenseGoalsGrid';
 
 export default function YearlyReport() {
   return <div className="mb-4">
@@ -74,19 +75,18 @@ export default function YearlyReport() {
                 <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
                   <span className="text-slate-700">변동 지출</span>
                 </h2>
-                <Grid data={data} />
+                <VariableExpensesGrid data={data} />
               </div>
               
 
               {/* Grid 2 */}
-              <div className="h-[800px] row-span-2">
+              <div className="h-[825px] row-span-2">
                 <div className="flex justify-between">
                   <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight first:mt-0 mb-4">
                     <span className="text-slate-700">지출 목표</span>
                   </h2>
-                  <Button variant={"outline"}>템플릿 불러오기</Button>
                 </div>
-                {/* <Grid2 data={data3} /> */}
+                <ExpenseGoalsGrid data={data3} />
               </div>
 
               {/* Grid 3 */}
@@ -97,16 +97,12 @@ export default function YearlyReport() {
                   </h2>
                   <Button variant={"outline"}>템플릿 불러오기</Button>
                 </div>
-                {/* <Grid2 data={data3} /> */}
+                <FixedExpensesGrid data={data} />
               </div>
             </div>
           </TabsContent>
           <TabsContent value="account2"></TabsContent>
         </Tabs>
-
-
-        
-        
       </CardContent>
     </Card>
      
